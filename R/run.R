@@ -1,2 +1,2 @@
 install.packages("rmarkdown")
-rmarkdown::render("demo.Rmd", output_file = "demo.html")
+rmarkdown::render("R/demo.Rmd", output_file = "../demo.html")
