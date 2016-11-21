@@ -1,2 +1,6 @@
 install.packages("rmarkdown")
-rmarkdown::render("./R/demo.Rmd", output_file = "../demo.html")
+
+list.files(path = ".", recursive = TRUE)
+list.files(path = "/", recursive = TRUE)
+
+rmarkdown::render("./demo.Rmd", output_file = "../demo.html")
