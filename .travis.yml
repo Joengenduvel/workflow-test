@@ -7,3 +7,4 @@ deploy:
   file: output/page.html
   on:
     repo: Joengenduvel/workflow-test
+    all_branches: true
