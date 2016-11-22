@@ -1,2 +1,11 @@
 language: r
 cache: packages
+
+deploy:
+  provider: releases
+  file:
+    - output/page.html
+  skip_cleanup: true
+  on:
+    tags: true
+  overwrite: true
