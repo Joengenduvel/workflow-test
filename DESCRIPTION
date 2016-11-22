@@ -8,5 +8,6 @@ Description: It tests the workflow.
 License: GPL-2
 LazyData: TRUE
 Imports:
+    knitr (>= 1.5.1),
     rmarkdown
 RoxygenNote: 5.0.1
