@@ -1,5 +1,3 @@
-install.packages("rmarkdown")
-
 list.files(path = ".", recursive = TRUE)
 list.files(path = "/", recursive = TRUE)
 
