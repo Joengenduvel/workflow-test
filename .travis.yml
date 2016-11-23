@@ -12,6 +12,7 @@ after_success:
   - "git config user.email 'travis-ci@example.com'"
   - "git config user.name 'Travis CI'"
   - "mkdir /tmp/output"
+  - "ls ./output"
   - "cp ./output/* /tmp/output"
   - "git fetch --depth 3 origin gh-pages:gh-pages"
   - "git checkout gh-pages"
@@ -20,7 +21,8 @@ after_success:
   - "git status"
   - "git commit -m 'update of result by Travis-CI'"
   - "git push"
-  - "ls -lR"
+  - "ls -l"
+  - "ls -l /tmp/output"
 
 deploy:
   provider: releases
