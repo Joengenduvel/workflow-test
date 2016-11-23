@@ -9,3 +9,9 @@ deploy:
   on:
     repo: Joengenduvel/workflow-test
     all_branches: true
+
+before_deploy: 
+  - "echo 'Going to deploy'"
+after_deploy:
+  - "git status"
+  - "ls -alr"
