@@ -5,7 +5,7 @@ after_success:
   - "git config user.email 'travis-ci@example.com'"
   - "git config user.name 'Travis CI'"
   - "git remote -v"
-  - "git fetch --unshallow -v"
+  - "git fetch --depth 3 origin gh-pages:gh-pages"
   - "cp output/page.html index.html"
   - "git add index.html"
   - "git stash"
