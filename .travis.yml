@@ -4,6 +4,9 @@ cache: packages
 before_install: "echo 'going to install'"
 before_script: "echo 'going to run script'"
 after_success:
+  - "cp output/page.html index.html"
+  - "git checkout gh-pages"
+  - "git add index.html"
   - "git status"
 
 deploy:
@@ -14,6 +17,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
+    tags: true
     repo: Joengenduvel/workflow-test
     all_branches: true
 
