@@ -12,6 +12,8 @@ deploy:
 
 before_deploy: 
   - "echo 'Going to deploy'"
+  - "git status"
+  - "ls -alR"
 after_deploy:
   - "git status"
-  - "ls -alr"
+  - "ls -alR"
