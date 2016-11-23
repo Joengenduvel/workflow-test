@@ -1,8 +1,10 @@
 language: r
 cache: packages
 
+before_install: "echo 'going to install'"
+before_script: "echo 'going to run script'"
 after_success:
-  - git status
+  - "git status"
 
 deploy:
   provider: releases
