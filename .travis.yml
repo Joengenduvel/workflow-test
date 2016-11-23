@@ -21,8 +21,8 @@ after_success:
   - "git status"
   - "git commit -m 'update of result by Travis-CI'"
   - "git push"
-  - "ls -l"
-  - "ls -l /tmp/output"
+  - "ls -lR ./*.Rcheck"
+  - "ls -lR /tmp/output"
 
 deploy:
   provider: releases
