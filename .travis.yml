@@ -6,11 +6,12 @@ language: r
 cache: packages
 
 after_success:
+  - "echo 'https://${GH_TOKEN}:@github.com' > '.git/credentials'"
+  - "cat '.git/credentials'"
   - "git config credential.helper 'store --file=.git/credentials'"
-  - "echo 'https://${GH_TOKEN}:@github.com' > .git/credentials"
-  - "cat .get/credentials"
   - "git config user.email 'travis-ci@example.com'"
   - "git config user.name 'Travis CI'"
+  - "git add output/page.html"
   - "git stash"
   - "git fetch --depth 3 origin gh-pages:gh-pages"
   - "git checkout gh-pages"
