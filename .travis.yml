@@ -2,12 +2,13 @@ language: r
 cache: packages
 
 after_success:
-  - "cp output/page.html index.html"
-  - "git stash"
+  - " git remote -v"
   - "git fetch"
+  - "cp output/page.html index.html"
+  - "git add index.html"
+  - "git stash"
   - "git checkout gh-pages"
   - "git stash pop"
-  - "git add index.html"
   - "git status"
   - "ls -l"
 
