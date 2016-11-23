@@ -2,8 +2,8 @@ language: r
 cache: packages
 
 after_success:
-  - "git config user.email "travis-ci@example.com"
-  - "git config user.name "Travis CI"
+  - "git config user.email 'travis-ci@example.com'"
+  - "git config user.name 'Travis CI'"
   - "git remote -v"
   - "git fetch -v"
   - "cp output/page.html index.html"
