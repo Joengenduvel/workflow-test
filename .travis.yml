@@ -13,7 +13,7 @@ after_success:
   - "git config user.name 'Travis CI'"
   - "mkdir /tmp/output"
   - "ls ./output"
-  - "cp ./output/* /tmp/output"
+  - "cp ./test1.Rcheck/00_pkg_src/test1/output/* /tmp/output"
   - "git fetch --depth 3 origin gh-pages:gh-pages"
   - "git checkout gh-pages"
   - "cp /tmp/output/* ."
