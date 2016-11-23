@@ -1,12 +1,12 @@
 env:
   global:
-    - secure: Yhu8YgX9lLBqQEvc3wdJ9gowNORg5hqWZ3/G9V+ak9OQR4kc2zbvj7MJUqGMG7wCbtsfg3kb5sot1D5PxoeSmCD/N4hRRLywgvd6J+0GvsATZZ4ZpVfMSsc3rbCW98rJUCaYbKY5PQTYhRkgKZ0oMQA3jjiRasXghEnupZ4g0veenWsyZho4UbKHeyKNZpUhcRGcVKk75o5jR5AJ2g1CJplhrmmNOfyg+rySFBOdxWo71VlLg6lU9hpPeaY9fNgcEa5Xf73qVkPxX/zdP8yR8OHvGC1/bqwjgZjrISkra68QM6MlmnXAS1Mxkt6XIsjVrvh8YZLD6SEBibiqlEWOymj+bpp+oobVxBQs776uT09HcheTt3C7853yDCJnhrEQjOSEZzX3i7Vt9qxjaaj4l+plQ4DSIOqmphw+C2/7+AKm6WJIUNyhWGKJuPaAlORae0YjRPcHpaYgnt5igLtI5o4Tf6gkU7LwGNDfAaD0H12QgnqEjcMoEB6kb3wzmsIDmyT8dCxMHH3oU8/rn5u88vnujUHSWpTuFNjMTv6mpMP9K/Ma8tgvJx5gkaOqj4m2/iFDI1dAMiRxT7rh78q7OHW3S50XtKL2IkRcHr+H0hBflIwR0/Ycn+C9RIrTCKw+pgUZBds4OaRbVKMdjRPVxdFod4iLAv+ak2ZTpa4Et4Q=
+    - secure: WUl05qgqGS6VAOjuEvO/TiBBC8or7f4nHxY+CDK72p+fQ23f4FzRFAw0byZqMAg1POaypweErOZDicJQWGBNPgGuz+dxSd9snFWe+TOdFnCQck7G8mVWRNhz9KY9G78XRrZxZand+oTxJ2wc36w8zh+mUFvEGCrNycvoaYlTecDEJCy+QmX55sZ7qjDpmrnb6DUhAtDWMYg7JlIj7FX0vnIH11D5LSwfYZiRwcNvsoRcukoHRlEV5dHJdfeCDEazEAQygoTMmH8jAWoBpCFV+B9Q+OSEf2/2kBUA7kryuDcmDPwqlup2s3WMQMoTSK087BgQUsQua+Kin8dfpoE6MyZJAcnQpY2IEomN6K1iDO4FdBBRgvpuVyR50NhUGEtD5lO+3sQS2ebFb2tJF17MeCM7JJ4AQnADMt+1hder7IL3Wa3PJy1Qa2hIZYaLNYeNLIT4C+KTnnVPvKuRe3BEgnI+Hc3py9nf5mlwYB4oLygaEh9ip7bLHx7H0vr1R6mnhJP0+n7mdbPNgN/r59xnVCbgFwYFH/Hu7RD5yeXGLyvVYrHlW389lkzsFlVragRfJMFZf3XaovQxJHua9EPF0Pi5C8/XXH4fLpDomZoUBO9r3VzgCKkILDwEjxLr6aJgCaWBsnRytLWVALjumd6F/H+1EjvFZWWcxrJtGItBYrA=
 
 language: r
 cache: packages
 
 after_success:
-  - "echo 'https://${GH_TOKEN}:@github.com' > '.git/credentials'"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - "cat '.git/credentials'"
   - "git config credential.helper 'store --file=.git/credentials'"
   - "git config user.email 'travis-ci@example.com'"
